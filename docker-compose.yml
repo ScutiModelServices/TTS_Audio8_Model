@@ -9,6 +9,7 @@ name: tts_audio8_model
 
 services:
   tts_audio8_model:
+    extra_hosts: ["host.docker.internal:host-gateway"]  # reaches services published on the host
     build: .
     image: tts_audio8_model:latest
     restart: unless-stopped
